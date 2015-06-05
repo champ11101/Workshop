@@ -14,6 +14,7 @@
 		exit();
 	}
 	mysql_connect("localhost","root","");
+	mysql_query("SET NAMES UTF8");
 	mysql_select_db("mydatabase");
 	$strSQL = "SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ";
 	$objQuery = mysql_query($strSQL);
@@ -38,25 +39,61 @@
         </tr>
     </tbody>
     </table>
-    <p><br>
+<div align="right">
+  <table width="150" height="150" border="1">
+    <tr>
+      <th scope="col">รายชื่อเพื่อน</th>
+    </tr>
+    <tr>
+      <td>
+	    <div align="center" style="width: 150px; height: 130px; overflow-y: scroll; scrollbar-arrow-color:blue; scrollbar-face-color: #e7e7e7; 
+              scrollbar-3dlight-color: #a0a0a0; scrollbar-darkshadow-color:#888888">
+	      <?php
+	  $friend = mysql_query("SELECT username FROM friends ORDER BY username ASC") or die(mysql_error());
+	  while($show = mysql_fetch_array($friend)){
+		  echo $show["username"]."<br><br>";
+		  }
+      ?></div></td>
+    </tr>
+  </table>
+</div>
+<p><br>
       <a href="logout.php">Logout</a><br>
-    </p>
-    <p>&nbsp;</p>
+</p>
 <div align="center">
-  <table width="1315" height="153" border="1">
+  <table width="1315" height="312" border="1">
         <tr>
           <th width="651" height="33" scope="col">ข้อความ</th>
           <th width="648" scope="col">ส่งข้อความ</th>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td><form id="form1" name="form1" method="post" action="">
+          <td><div align="center" style="width: 660px; height: 300px; overflow-y: scroll; scrollbar-arrow-color:blue; scrollbar-face-color: #e7e7e7; 
+              scrollbar-3dlight-color: #a0a0a0; scrollbar-darkshadow-color:#888888">
+			  <?php
+		  mysql_select_db("mydatabase");
+		  $data = mysql_query("SELECT sender, message FROM message ORDER BY ID DESC") or die(mysql_error());
+		  ?>
+		  <?php
+		  while($info = mysql_fetch_array($data)){?>
+			  
+              จาก : <?php echo $info["sender"];?><br />
+              ข้อความ : <?php echo $info["message"];?><br /><br />
+			  
+		  <?php
+          }
+          ?></div>
+          
+          <?php 
+		  mysql_close();
+		  ?>
+          </td>
+          <td><form id="form1" name="form1" method="post" action="savemessage.php">
             <div align="center">
               <p>ส่งข้อความถึง : 
                 <label for="textfield"></label>
                 <input type="text" name="textfield" id="textfield" />
               </p>
-              <p>ข้อความที่จะส่ง : 
+              <p align="center">ข้อความที่จะส่ง : 
                 <label for="textarea"></label>
                 <textarea name="textarea" id="textarea" cols="45" rows="10"></textarea>
               </p>
@@ -67,7 +104,7 @@
             </div>
           </form></td>
         </tr>
-      </table>
+  </table>
 </div>
     <p>&nbsp;</p>
 </body>
