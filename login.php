@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Champ Login</title>
 </head>
-
 <body>
 <div align="right" ><font size="+3" >Champ</font></div>
 <form id="form1" name="form1" method="post" action="check_login.php">
