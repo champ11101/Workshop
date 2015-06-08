@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2015 at 01:02 PM
+-- Generation Time: Jun 08, 2015 at 03:00 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `message` (
   `recipients` varchar(15) NOT NULL,
   `message` text NOT NULL,
   `sender` varchar(15) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `message`
@@ -85,7 +85,12 @@ INSERT INTO `message` (`ID`, `recipients`, `message`, `sender`) VALUES
 (3, 'champ', '', 'toom'),
 (4, 'champ', 'Hello', 'toom'),
 (5, 'champ', 'Helloooooo', 'toom'),
-(6, 'champ', 'สวัสดีจ๊ะ มาทำไรกันหยอ เหอ\r\n5555\r\nหนึ่งสองสามสี่\r\n\r\n\r\n\r\n555', 'toom');
+(6, 'champ', 'สวัสดีจ๊ะ มาทำไรกันหยอ เหอ\r\n5555\r\nหนึ่งสองสามสี่\r\n\r\n\r\n\r\n555', 'toom'),
+(7, '', '', ''),
+(8, '', '', ''),
+(9, '', '', ''),
+(10, '', '', ''),
+(11, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -99,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `send_message` (
   `message` text NOT NULL,
   `sender` varchar(20) NOT NULL DEFAULT 'champ',
   `status` enum('true','false') NOT NULL DEFAULT 'false' COMMENT 'sending status'
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `send_message`
@@ -111,7 +116,10 @@ INSERT INTO `send_message` (`ID`, `send_to`, `message`, `sender`, `status`) VALU
 (3, 'mint', 'vsfdgvsthbdfgh', 'champ', 'false'),
 (4, 'james', 'vdzgcvkjhbflvkxh982347523', 'champ', 'false'),
 (5, 'toomtam', 'kczvygldhfg', 'champ', 'false'),
-(6, 'mint', 'afgdhtjfuyfghfdsaretyfgfd', 'champ', 'false');
+(6, 'mint', 'afgdhtjfuyfghfdsaretyfgfd', 'champ', 'false'),
+(7, 'toomtam', 'sdfbrshdfg', 'champ', 'false'),
+(8, 'mint', 'nfgihk,xghnxgf', 'champ', 'false'),
+(9, 'james', 'poqurfgusgjgcvjhm', 'champ', 'false');
 
 --
 -- Indexes for dumped tables
@@ -154,12 +162,12 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `send_message`
 --
 ALTER TABLE `send_message`
-  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
