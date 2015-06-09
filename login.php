@@ -5,7 +5,6 @@
 <title>Champ Login</title>
 </head>
 <body>
-<div align="right" ><font size="+3" >Champ</font></div>
 <form id="form1" name="form1" method="post" action="check_login.php">
   <p align="center">Login</p>
   <div align="center">
