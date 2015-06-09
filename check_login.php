@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	
 	mysql_connect("localhost","root","");
 	mysql_select_db("mydatabase");
 	$strSQL = "SELECT * FROM member WHERE Username = '".mysql_real_escape_string($_POST['username']).
