@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Jun 09, 2015 at 12:10 PM
+=======
+-- Generation Time: Jun 05, 2015 at 12:31 PM
+>>>>>>> origin/master
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -73,7 +77,11 @@ CREATE TABLE IF NOT EXISTS `message` (
   `recipients` varchar(15) NOT NULL,
   `message` text NOT NULL,
   `sender` varchar(15) NOT NULL
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+>>>>>>> origin/master
 
 --
 -- Dumping data for table `message`
@@ -85,6 +93,7 @@ INSERT INTO `message` (`ID`, `recipients`, `message`, `sender`) VALUES
 (3, 'champ', '', 'toom'),
 (4, 'champ', 'Hello', 'toom'),
 (5, 'champ', 'Helloooooo', 'toom'),
+<<<<<<< HEAD
 (6, 'champ', 'สวัสดีจ๊ะ มาทำไรกันหยอ เหอ\r\n5555\r\nหนึ่งสองสามสี่\r\n\r\n\r\n\r\n555', 'toom'),
 (7, '', '', ''),
 (8, '', '', ''),
@@ -92,6 +101,9 @@ INSERT INTO `message` (`ID`, `recipients`, `message`, `sender`) VALUES
 (10, '', '', ''),
 (11, '', '', ''),
 (12, '', '', '');
+=======
+(6, 'champ', 'สวัสดีจ๊ะ มาทำไรกันหยอ เหอ\r\n5555\r\nหนึ่งสองสามสี่\r\n\r\n\r\n\r\n555', 'toom');
+>>>>>>> origin/master
 
 -- --------------------------------------------------------
 
@@ -105,7 +117,11 @@ CREATE TABLE IF NOT EXISTS `send_message` (
   `message` text NOT NULL,
   `sender` varchar(20) NOT NULL DEFAULT 'champ',
   `status` enum('true','false') NOT NULL DEFAULT 'false' COMMENT 'sending status'
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+>>>>>>> origin/master
 
 --
 -- Dumping data for table `send_message`
@@ -117,10 +133,14 @@ INSERT INTO `send_message` (`ID`, `send_to`, `message`, `sender`, `status`) VALU
 (3, 'mint', 'vsfdgvsthbdfgh', 'champ', 'false'),
 (4, 'james', 'vdzgcvkjhbflvkxh982347523', 'champ', 'false'),
 (5, 'toomtam', 'kczvygldhfg', 'champ', 'false'),
+<<<<<<< HEAD
 (6, 'mint', 'afgdhtjfuyfghfdsaretyfgfd', 'champ', 'false'),
 (7, 'toomtam', 'sdfbrshdfg', 'champ', 'false'),
 (8, 'mint', 'nfgihk,xghnxgf', 'champ', 'false'),
 (9, 'james', 'poqurfgusgjgcvjhm', 'champ', 'false');
+=======
+(6, 'mint', 'afgdhtjfuyfghfdsaretyfgfd', 'champ', 'false');
+>>>>>>> origin/master
 
 --
 -- Indexes for dumped tables
@@ -163,12 +183,20 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
+<<<<<<< HEAD
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+=======
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+>>>>>>> origin/master
 --
 -- AUTO_INCREMENT for table `send_message`
 --
 ALTER TABLE `send_message`
+<<<<<<< HEAD
   MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+=======
+  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+>>>>>>> origin/master
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -3,7 +3,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
 	session_start();
+<<<<<<< HEAD
 	
+=======
+>>>>>>> origin/master
 	if($_SESSION['UserID'] == "")
 	{
 		echo "Please Login !!!";
@@ -40,7 +43,10 @@
         </tr>
     </tbody>
     </table>
+<<<<<<< HEAD
 <a href="logout.php">Logout</a>
+=======
+>>>>>>> origin/master
 <div align="right">
   <table width="150" height="150" border="1">
     <tr>
@@ -58,6 +64,7 @@
       ?></div></td>
     </tr>
   </table>
+<<<<<<< HEAD
   <br>
 </div>
 <div align="center">
@@ -68,6 +75,20 @@
         </tr>
         <tr>
           <td height="322"><div align="center" style="width: 560px; height: 300px; overflow-y: scroll; scrollbar-arrow-color:blue; scrollbar-face-color: #e7e7e7; 
+=======
+</div>
+<p><br>
+      <a href="logout.php">Logout</a><br>
+</p>
+<div align="center">
+  <table width="1315" height="312" border="1">
+        <tr>
+          <th width="651" height="33" scope="col">ข้อความ</th>
+          <th width="648" scope="col">ส่งข้อความ</th>
+        </tr>
+        <tr>
+          <td><div align="center" style="width: 660px; height: 300px; overflow-y: scroll; scrollbar-arrow-color:blue; scrollbar-face-color: #e7e7e7; 
+>>>>>>> origin/master
               scrollbar-3dlight-color: #a0a0a0; scrollbar-darkshadow-color:#888888">
 			  <?php
 		  mysql_select_db("mydatabase");
@@ -83,7 +104,11 @@
           }
           ?></div>
           
+<<<<<<< HEAD
           <?php
+=======
+          <?php 
+>>>>>>> origin/master
 		  mysql_close();
 		  ?>
           </td>
@@ -109,4 +134,3 @@
     <p>&nbsp;</p>
 </body>
     </html>
-    
