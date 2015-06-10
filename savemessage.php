@@ -4,14 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 </head>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 <body>
 </body>
 </html>
 <?php
+
 	mysql_connect("localhost","root","") or die ("Unable connect database");
 	mysql_query("SET NAMES UTF8");
 	mysql_select_db("mydatabase") or die ("Unable select database");
@@ -19,21 +16,14 @@
 	$keyword = $_POST['textfield'];
 	$check = mysql_query("SELECT username FROM friends WHERE (username = '$keyword') ");
 	$data = mysql_fetch_array($check);
+	
 	if(empty($data)){
-<<<<<<< HEAD
 		echo "คุณไม่มีเพื่อนชื่อ ".$_POST['textfield']." "."ในฐานข้อมูล";
 	}
-=======
-		echo "คุณไม่มีเพื่อนชื่อ ".$_POST['textfield'];}
->>>>>>> origin/master
-		else
-		{
+	else
+	{
 			mysql_query("INSERT INTO send_message (send_to, message) values ('$_POST[textfield]','$_POST[textarea]')");
 			echo "บันทึกข้อความลงฐานข้อมูลรอส่งเรียบร้อย";
-<<<<<<< HEAD
-		}
-=======
-			}
->>>>>>> origin/master
+	}
 	mysql_close();
 ?>
