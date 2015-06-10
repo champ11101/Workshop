@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
 	session_start();
+	
 	if($_SESSION['UserID'] == "")
 	{
 		echo "Please Login !!!";
@@ -39,14 +40,15 @@
         </tr>
     </tbody>
     </table>
+<a href="logout.php">Logout</a>
 <div align="right">
-  <table width="150" height="150" border="1">
+  <table width="150" height="137" border="1">
     <tr>
       <th scope="col">รายชื่อเพื่อน</th>
     </tr>
     <tr>
-      <td>
-	    <div align="center" style="width: 150px; height: 130px; overflow-y: scroll; scrollbar-arrow-color:blue; scrollbar-face-color: #e7e7e7; 
+      <td height="104">
+	    <div align="center" style="width: 150px; height: 100px; overflow-y: scroll; scrollbar-arrow-color:blue; scrollbar-face-color: #e7e7e7; 
               scrollbar-3dlight-color: #a0a0a0; scrollbar-darkshadow-color:#888888">
 	      <?php
 	  $friend = mysql_query("SELECT username FROM friends ORDER BY username ASC") or die(mysql_error());
@@ -56,22 +58,20 @@
       ?></div></td>
     </tr>
   </table>
+  <br>
 </div>
-<p><br>
-      <a href="logout.php">Logout</a><br>
-</p>
 <div align="center">
-  <table width="1315" height="312" border="1">
+  <table width="981" height="345" border="1">
         <tr>
-          <th width="651" height="33" scope="col">ข้อความ</th>
-          <th width="648" scope="col">ส่งข้อความ</th>
+          <th width="560" height="33" scope="col">ข้อความ</th>
+          <th width="405" scope="col">ส่งข้อความ</th>
         </tr>
         <tr>
-          <td><div align="center" style="width: 660px; height: 300px; overflow-y: scroll; scrollbar-arrow-color:blue; scrollbar-face-color: #e7e7e7; 
+          <td height="304"><div align="center" style="width: 560px; height: 300px; overflow-y: scroll; scrollbar-arrow-color:blue; scrollbar-face-color: #e7e7e7; 
               scrollbar-3dlight-color: #a0a0a0; scrollbar-darkshadow-color:#888888">
 			  <?php
 		  mysql_select_db("mydatabase");
-		  $data = mysql_query("SELECT sender, message FROM message ORDER BY ID DESC") or die(mysql_error());
+		  $data = mysql_query("SELECT * FROM message ORDER BY ID DESC") or die(mysql_error());
 		  ?>
 		  <?php
 		  while($info = mysql_fetch_array($data)){?>
@@ -81,11 +81,12 @@
 			  
 		  <?php
           }
-          ?></div>
-          
-          <?php 
+          ?>
+		  <?php
 		  mysql_close();
-		  ?>
+		  ?></div>
+          
+          
           </td>
           <td><form id="form1" name="form1" method="post" action="savemessage.php">
             <div align="center">
@@ -109,3 +110,4 @@
     <p>&nbsp;</p>
 </body>
     </html>
+    
