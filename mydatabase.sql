@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2015 at 12:31 PM
+-- Generation Time: Jun 10, 2015 at 12:07 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `message` (
   `recipients` varchar(15) NOT NULL,
   `message` text NOT NULL,
   `sender` varchar(15) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `message`
@@ -91,7 +91,13 @@ INSERT INTO `message` (`ID`, `recipients`, `message`, `sender`) VALUES
 (9, '', '', ''),
 (10, '', '', ''),
 (11, '', '', ''),
-(12, '', '', '');
+(12, '', '', ''),
+(13, 'champ', 'k à¸™à¸²à¸²', 'Jame'),
+(14, 'champ', 'kkk', 'Jame'),
+(15, 'champ', 'ตามนั้น', 'Jame'),
+(16, 'champ', 'Hello 11', 'toom'),
+(17, 'champ', 'Hello12', 'toom'),
+(18, 'champ', 'Hello13', 'toom');
 
 -- --------------------------------------------------------
 
@@ -163,7 +169,7 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `send_message`
 --
